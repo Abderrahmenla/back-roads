@@ -1,11 +1,10 @@
 import React,{useState} from "react"
 import styles from '../css/navbar.module.css'
-import { Link } from "gatsby"
 import {FaAlignRight} from "react-icons/fa"
 import links from '../constants/links'
 import socialicons from '../constants/social-icons'
 import logo from '../images/logo.svg'
-
+import AniLink from "gatsby-plugin-transition-link/AniLink"; //for transition between pages
 const Navbar = () => {
   const [isOpen,setNav] = (useState(false))
   const toggleNav = () => {
@@ -22,7 +21,7 @@ const Navbar = () => {
         </div>
         <ul className={isOpen ? `${styles.navLinks} ${styles.showNav}`: `${styles.navLinks}`}>
           {links.map((item,index)=>{
-            return(<li key={index}><Link to={item.path}>{item.text}</Link></li>)
+            return(<li key={index}><AniLink fade to={item.path}>{item.text}</AniLink></li>)
           })}
         </ul>
         <div className={styles.navSocialLinks}>
