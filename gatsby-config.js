@@ -1,9 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
- require("dotenv").config({
+require("dotenv").config({
    path: `.env.${process.env.NODE_ENV}`,
  })
 module.exports = {
@@ -31,5 +26,6 @@ module.exports = {
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-styled-components`,
-      `gatsby-plugin-transition-link`,],
+      `gatsby-plugin-transition-link`,
+      `gatsby-plugin-playground`],
 }
