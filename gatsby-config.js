@@ -6,6 +6,9 @@ module.exports = {
     title:"BackRoads",
     description:"explore awesome worldwide tours and discover what makes each of them unique. Forget your daily routine & say yes to adventures",
     author:"@Abderrahmenlh",
+    twitterUsername:"@AbderrahmenLah1",
+    image:'/defaultBcg.jpeg',
+    siteUrl:'https://back-roads.netlify.com'
   },
   plugins:[
     {
@@ -23,6 +26,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+      `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-styled-components`,
