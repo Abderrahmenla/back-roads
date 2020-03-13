@@ -12,6 +12,14 @@ module.exports = {
   },
   plugins:[
     {
+     resolve: `gatsby-plugin-manifest`,
+     options: {
+       name: `BackRoads`,
+       short_name: `BackRoads`,
+       start_url: `/`,
+       icon:`src/images/favicon.ico`
+     },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -26,6 +34,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://back-roads.netlify.com',
+        sitemap: 'https://back-roads.netlify.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      },
+      `gatsby-plugin-sitemap`,
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
