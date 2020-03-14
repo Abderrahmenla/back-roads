@@ -12,13 +12,15 @@ module.exports = {
   },
   plugins:[
     {
-     resolve: `gatsby-plugin-manifest`,
-     options: {
-       name: `BackRoads`,
-       short_name: `BackRoads`,
-       start_url: `/`,
-       icon:`src/images/favicon.ico`
-     },
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `BackRoads`,
+        short_name: `BackRoads`,
+        start_url: `/`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,6 +43,7 @@ module.exports = {
         sitemap: 'https://back-roads.netlify.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       },
+    },
       `gatsby-plugin-sitemap`,
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
